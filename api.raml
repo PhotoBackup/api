@@ -1,0 +1,47 @@
+#%RAML 0.8
+
+title: PhotoBackup
+version: v1
+traits:
+    - secured:
+        queryParameters:
+            password:
+                description: The server password
+                required: true
+                type: string
+
+/:
+    get:
+        description: Retrieve a simple web page describing PhotoBackup.
+        responses:
+            200:
+
+    is: [ secured ]
+    post:
+        description: Create a new picture to the collection.
+        queryParameters:
+            upfile:
+                description: The photo to backup
+                required: true
+                type: file
+            filesize:
+                description: The size in bytes of the uploaded file.
+                required: true
+                type: int
+        body:
+        responses:
+            200:
+            401:
+            403:
+            500:
+
+
+/test:
+    is: [ secured ]
+    post:
+        description: Create a test result.
+        responses:
+            200:
+            401:
+            403:
+            500:
