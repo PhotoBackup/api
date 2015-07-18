@@ -1,23 +1,24 @@
 # Server implementations
 Here are some recommendations to write consistent server implementation
 for PhotoBackup. Nothing is mandatory and everything can be discussed
-and changed over time, feel free to discuss it!
+and changed over time, feel free to discuss it with the authors!
 
 ## Configuration
-Configuration file should be in a `.ini` format and called `~/.photobackup`,
-with `~` the user's directory (small precision for Windows users).
+Configuration file should be in a `.ini` formatted file called
+`~/.photobackup`, with `~` the user's directory
+(small precision for Windows users).
 
 # Commands
 Configuration file should be created with:
 
-    `photobackup init`
+    photobackup init
 
 and PhotoBackup launched with:
 
-    `photobackup run`
+    photobackup run
 
-`docopt` is used for [Python](https://pypi.python.org/pypi/docopt/0.6.2)
-and [NodeJS](https://www.npmjs.com/package/docopt) implementation,
+`docopt` is used for [Python](https://pypi.python.org/pypi/docopt)
+and [NodeJS](https://www.npmjs.com/package/docopt) implementations,
 sharing the same docstring.
 
 # Packaging
