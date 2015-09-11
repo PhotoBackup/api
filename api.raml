@@ -12,9 +12,9 @@ traits:
 
 /:
     get:
-        description: Retrieve a simple web page describing PhotoBackup.
+        description: Redirect to official PhotoBackup website.
         responses:
-            200:
+            302: redirection to https://photobackup.github.io/
 
     is: [ secured ]
     post:
@@ -30,10 +30,9 @@ traits:
                 type: int
         body:
         responses:
-            200:
-            401:
-            403:
-            500:
+            200: "Test succeeded \o/"
+            403: "wrong password!"
+            500: "MEDIA_ROOT does not exist!" or "Can't write to MEDIA_ROOT!"
 
 
 /test:
@@ -41,7 +40,9 @@ traits:
     post:
         description: Create a test result.
         responses:
-            200:
-            401:
-            403:
-            500:
+            200: OK
+            400: "missing file size in the request!"
+            401: "no file in the request!"
+            403: "wrong password!"
+            411: "file sizes do not match!"
+            500: server error
