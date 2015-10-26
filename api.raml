@@ -44,10 +44,20 @@ version: v1
 /test:
     post:
         description: Check if the PhotoBackup server has been correctly configured.
+        body:
+            multipart/form-data:
+                formParameters:
+                    password:
+                        displayName: Password hash
+                        description: An SHA512 hash of the password.
+                        pattern: "[a-f0-9]{128}"
+                        example: 3bb12eda3c298db5de25597f54d924f2e17e78a26ad8953ed8218ee682f0bbbe9021e2f3009d152c911bf1f25ec683a902714166767afbd8e5bd0fb0124ecb8a
+                        required: true
+                        type: string
         responses:
-            200: OK
-            400: "missing file size in the request!"
-            401: "no file in the request!"
-            403: "wrong password!"
-            411: "file sizes do not match!"
-            500: server error
+            200:
+                description: The PhotoBackup server is ready to use.
+            403:
+                description: The provided password does not match the server password.
+            500:
+                description: The media folder does not exist on the server, or is unwritable to by PhotoBackup.
