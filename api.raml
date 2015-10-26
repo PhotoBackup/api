@@ -2,18 +2,10 @@
 
 title: PhotoBackup
 version: v1
-traits:
-    - secured:
-        queryParameters:
-            password:
-                description: The server password
-                required: true
-                type: string
 
 /:
     post:
         description: Create a new picture to the collection.
-        is: [ secured ]
         body:
             multipart/form-data:
                 formParameters:
@@ -25,6 +17,10 @@ traits:
                         description: The size in bytes of the uploaded file.
                         required: true
                         type: integer
+                    password:
+                        description: The server password
+                        required: true
+                        type: string
         responses:
             200: "Test succeeded \o/"
             403: "wrong password!"
@@ -32,7 +28,6 @@ traits:
 
 
 /test:
-    is: [ secured ]
     post:
         description: Create a test result.
         responses:
