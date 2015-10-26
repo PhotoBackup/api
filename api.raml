@@ -45,7 +45,7 @@ version: v1
     post:
         description: Check if the PhotoBackup server has been correctly configured.
         body:
-            multipart/form-data:
+            application/x-www-form-urlencoded:
                 formParameters:
                     password:
                         displayName: Password hash
