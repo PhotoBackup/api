@@ -16,7 +16,6 @@ traits:
         responses:
             302: redirection to https://photobackup.github.io/
 
-    is: [ secured ]
     post:
         description: Create a new picture to the collection.
         queryParameters:
@@ -28,6 +27,7 @@ traits:
                 description: The size in bytes of the uploaded file.
                 required: true
                 type: integer
+        is: [ secured ]
         body:
         responses:
             200: "Test succeeded \o/"
