@@ -10,15 +10,21 @@ version: v1
             multipart/form-data:
                 formParameters:
                     upfile:
-                        description: The photo to backup
+                        displayName: Photo
+                        description: The photo file that needs to be stored by PhotoBackup.
                         required: true
                         type: file
                     filesize:
-                        description: The size in bytes of the uploaded file.
+                        displayName: Photo size
+                        description: The size of the photo file, in bytes.
+                        example: 1024
                         required: true
                         type: integer
                     password:
-                        description: The server password
+                        displayName: Password hash
+                        description: An SHA512 hash of the password.
+                        pattern: "[a-f0-9]{128}"
+                        example: 3bb12eda3c298db5de25597f54d924f2e17e78a26ad8953ed8218ee682f0bbbe9021e2f3009d152c911bf1f25ec683a902714166767afbd8e5bd0fb0124ecb8a
                         required: true
                         type: string
         responses:
