@@ -28,10 +28,18 @@ version: v1
                         required: true
                         type: string
         responses:
-            200: "Test succeeded \o/"
-            403: "wrong password!"
-            500: "MEDIA_ROOT does not exist!" or "Can't write to MEDIA_ROOT!"
-
+            200:
+                description: The photo is successfully stored by PhotoBackup.
+            400:
+                description: The client did not provide a `filesize` parameter.
+            401:
+                description: The client did not provide a photo file.
+            403:
+                description: The provided password does not match the server password.
+            411:
+                description: The provided photo file has a different size than what the client provided in the `filesize` parameter.
+            500:
+                description: The media folder does not exist on the server, or is unwritable to by PhotoBackup.
 
 /test:
     post:
