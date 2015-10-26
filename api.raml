@@ -5,7 +5,7 @@ version: v1
 
 /:
     post:
-        description: Create a new picture to the collection.
+        description: Upload a photo to the server.
         body:
             multipart/form-data:
                 formParameters:
@@ -29,7 +29,7 @@ version: v1
 
 /test:
     post:
-        description: Create a test result.
+        description: Check if the PhotoBackup server has been correctly configured.
         responses:
             200: OK
             400: "missing file size in the request!"
