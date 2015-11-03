@@ -1,0 +1,68 @@
+#%RAML 0.8
+
+title: PhotoBackup
+version: v2
+
+/:
+    post:
+        description: Upload a photo to the server.
+        body:
+            multipart/form-data:
+                formParameters:
+                    upfile:
+                        displayName: Photo
+                        description: The photo file that needs to be stored by PhotoBackup.
+                        required: true
+                        type: file
+                    filesize:
+                        displayName: Photo size
+                        description: The size of the photo file, in bytes.
+                        example: 1024
+                        required: true
+                        type: integer
+                    password:
+                        displayName: Password hash
+                        description: An SHA512 hash of the password.
+                        pattern: "[a-f0-9]{128}"
+                        example: 3bb12eda3c298db5de25597f54d924f2e17e78a26ad8953ed8218ee682f0bbbe9021e2f3009d152c911bf1f25ec683a902714166767afbd8e5bd0fb0124ecb8a
+                        required: true
+                        type: string
+
+        responses:
+            200:
+                description: The photo is successfully stored by PhotoBackup.
+            400:
+                description: The client did not provide a `filesize` parameter.
+            401:
+                description: The client did not provide a photo file.
+            403:
+                description: The provided password does not match the server password.
+            409:
+                description: The file exists and is complete.
+            411:
+                description: The provided photo file has a different size than what the client provided in the `filesize` parameter.
+            500:
+                description: The media folder does not exist on the server, or is unwritable to by PhotoBackup.
+
+/test:
+    post:
+        description: Check if the PhotoBackup server has been correctly configured.
+        body:
+            application/x-www-form-urlencoded:
+                formParameters:
+                    password:
+                        displayName: Password hash
+                        description: An SHA512 hash of the password.
+                        pattern: "[a-f0-9]{128}"
+                        example: 3bb12eda3c298db5de25597f54d924f2e17e78a26ad8953ed8218ee682f0bbbe9021e2f3009d152c911bf1f25ec683a902714166767afbd8e5bd0fb0124ecb8a
+                        required: true
+                        type: string
+        responses:
+            200:
+                description: The PhotoBackup server is ready to use.
+            401:
+                description: No password has been provided.
+            403:
+                description: The provided password does not match the server password.
+            500:
+                description: The media folder does not exist on the server, or is unwritable to by PhotoBackup.
