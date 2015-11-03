@@ -26,10 +26,10 @@ Here are details on its evolution and compatibilities with current servers and c
 | Language      | Maintainer      | API version |
 |:-------------:|:---------------:|:-----------:|
 | [Python (bottle)](https://github.com/PhotoBackup/server-bottle) | [Stéphane Péchard](https://github.com/stephanepechard) | v1 |
-| [Javascript (Node)](https://github.com/PhotoBackup/server-node) | [Stéphane Péchard](https://github.com/stephanepechard) | v1 |
+| [JS (Node)](https://github.com/PhotoBackup/server-node)         | [Stéphane Péchard](https://github.com/stephanepechard) | v1 |
 | [Go](https://github.com/lupine/photobackup-server-go)           | [Nick Thomas](https://github.com/lupine) | v2 |
 | [Perl](https://github.com/PhotoBackup/server-perl)              | [Dave Webb](https://github.com/d5ve) | v1 |
-| [PHP](https://github.com/PhotoBackup/server-php)                | [Martijn van der Ven](https://github.com/Zegnat) | rc1 |
+| [PHP](https://github.com/PhotoBackup/server-php)                | [Martijn van der Ven](https://github.com/Zegnat) | v1 |
 
 ### Client implementations
 
