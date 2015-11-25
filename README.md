@@ -22,7 +22,7 @@ API description are located in `api.raml` files. Here are details on evolution a
 | [JS (Node)](https://github.com/PhotoBackup/server-node)         | [Stéphane Péchard](https://github.com/stephanepechard) | [v0.1.0](https://github.com/PhotoBackup/server-node/releases/tag/v0.1.0) | [v1](https://github.com/PhotoBackup/api/releases/tag/v1) |
 | [Go](https://github.com/lupine/photobackup-server-go)           | [Nick Thomas](https://github.com/lupine) | [v0.1.0](https://github.com/PhotoBackup/server-go/releases/tag/v0.1.0) | [v2](https://github.com/PhotoBackup/api/releases/tag/v2) |
 | [Perl](https://github.com/PhotoBackup/server-perl)              | [Dave Webb](https://github.com/d5ve) | [v0.11](https://github.com/PhotoBackup/server-perl/releases/tag/0.11) | [v1](https://github.com/PhotoBackup/api/releases/tag/v1) |
-| [PHP](https://github.com/PhotoBackup/server-php)                | [Martijn van der Ven](https://github.com/Zegnat) |  [v1.0.0-rc2](https://github.com/PhotoBackup/server-php/releases/tag/v1.0.0-rc.2) | [v1](https://github.com/PhotoBackup/api/releases/tag/v1) |
+| [PHP](https://github.com/PhotoBackup/server-php)                | [Martijn van der Ven](https://github.com/Zegnat) |  [v1.0.0-rc2](https://github.com/PhotoBackup/server-php/releases/tag/v1.0.0) | [v1](https://github.com/PhotoBackup/api/releases/tag/v1) |
 
 
 ### Client implementations compatibility
