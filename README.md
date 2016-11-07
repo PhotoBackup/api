@@ -29,5 +29,5 @@ API description are located in `api.raml` files. Here are details on evolution a
 
 | Platform      | Maintainer      | Last version | API version |
 |:-------------:|:---------------:|:------------:|:-----------:|
-| [Android](https://github.com/PhotoBackup/client-android) | [Stéphane Péchard](https://github.com/stephanepechard) | [v0.8.0](https://github.com/PhotoBackup/client-android/releases/tag/v0.8.0) | [v1](https://github.com/PhotoBackup/api/releases/tag/v1) |
+| [Android](https://github.com/PhotoBackup/client-android) | [Stéphane Péchard](https://github.com/stephanepechard) | [v0.11.0](https://github.com/PhotoBackup/client-android/releases/tag/v0.11.0) | [v1](https://github.com/PhotoBackup/api/releases/tag/v1) |
 | [Python](https://github.com/PhotoBackup/client-python)   | [Stéphane Péchard](https://github.com/stephanepechard) | [v0.1.0](https://github.com/PhotoBackup/client-python/releases/tag/v0.1.0) | [v1](https://github.com/PhotoBackup/api/releases/tag/v1) |
